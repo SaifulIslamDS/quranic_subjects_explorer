@@ -1,0 +1,153 @@
+Category,Theme,Arabic Term,Sample Verses,Notes
+Aqeedah (Belief),Monotheism,Tawheed,"112:1-4, 2:255, 6:101",Affirmation of Allah’s Oneness and attributes
+Aqeedah (Belief),Prophethood,Risalah,"2:213, 3:144, 33:40",Prophets sent for guidance; finality of Muhammad ﷺ
+Aqeedah (Belief),Hereafter,Akhirah,"2:4, 75:1-40, 99:1-8",Resurrection, judgment, paradise, hell
+Aqeedah (Belief),Angels,Mala'ikah,"2:285, 66:6, 35:1",Created beings with specific duties
+Aqeedah (Belief),Divine Decree,Qadr,"54:49, 57:22",Belief in predestination
+Worship (Ibadah),Prayer,Salah,"2:3, 2:238, 17:78",The central act of worship
+Worship (Ibadah),Charity,Zakah,"2:43, 9:60, 24:56",Purification of wealth, helping others
+Worship (Ibadah),Fasting,Sawm,"2:183-185",Spiritual and physical discipline in Ramadan
+Worship (Ibadah),Pilgrimage,Hajj,"2:196-203, 22:27",Journey to the sacred House
+Worship (Ibadah),Striving in Allah’s cause,Jihad,"2:190, 9:41, 49:15",Spiritual and physical struggle
+Ethics & Morality,Truthfulness,Sidq,"9:119, 33:70",Moral integrity
+Ethics & Morality,Patience,Sabr,"2:153, 3:200, 39:10",A repeated virtue in times of trial
+Ethics & Morality,Gratitude,Shukr,"14:7, 31:12",Being thankful to Allah and people
+Ethics & Morality,Modesty,Haya,"24:30-31",Internal and external modesty
+Ethics & Morality,Trustworthiness,Amanah,"4:58, 23:8",Essential for social stability
+Ethics & Morality,Justice,Adl,"4:135, 16:90",Universal value across all relations
+Family & Society,Marriage,Nikah,"30:21, 4:3",Foundation of family life
+Family & Society,Divorce,Talaq,"2:229-232, 65:1",Regulated with fairness and dignity
+Family & Society,Parents' Rights,Birrul Walidain,"17:23-24, 31:14",Respect and kindness to parents
+Family & Society,Orphans,Yatama,"2:220, 4:10",Protecting the vulnerable
+Family & Society,Children's upbringing,Tarbiyah,"66:6, 31:13-19",Spiritual and moral guidance
+Law & Governance,Justice & Fairness,Adl wa Qist,"5:8, 6:152",Social equity and accountability
+Law & Governance,Testimony,Shahadah,"2:282, 5:106",Laws of witnessing in contracts
+Law & Governance,Criminal Laws,Hudood,"5:38-39, 24:2",Limits and punishments for major crimes
+Law & Governance,Contracts & Business,Mua’amalat,"2:282-283, 4:29",Rules for fair dealings
+Law & Governance,Inheritance,Wiraathah,"4:7, 4:11-12",Detailed laws of estate distribution
+Stories,Adam & Iblis,Adam wa Iblis,"2:30-39, 7:11-25",Beginning of human test
+Stories,Nuh (Noah),Nuh,"11:25-49",Persistence in da’wah
+Stories,Musa (Moses),Musa,"20:9-98, 28:3-46",Liberation from Pharaoh
+Stories,Isa (Jesus),Isa,"3:45-55, 5:110",His miraculous birth and mission
+Stories,Prophet Muhammad ﷺ,Muhammad,"33:40, 48:29",Life examples and leadership
+Stories,Past Nations,Ummam al-Maadiyah,"7:59-102",Lessons from Aad, Thamud, etc.
+Self-purification (Tazkiyah),Sincerity,Ikhlas,"98:5, 39:2-3",Purity of intention
+Self-purification,Repentance,Tawbah,"9:104, 66:8",Turning to Allah with remorse
+Self-purification,Humility,Tawadhu',"25:63, 31:18",Humbleness in attitude
+Self-purification,Envy,Hasad,"113:5, 12:8-18",Spiritual disease
+Spiritual Concepts,Fear of Allah,Taqwa,"2:2-3, 3:102",Most repeated spiritual quality
+Spiritual Concepts,Reliance on Allah,Tawakkul,"3:159, 65:3",Trusting Allah in all matters
+Spiritual Concepts,Remembrance,Dhikr,"13:28, 33:41",Soul’s nourishment
+Spiritual Concepts,Grief and Hope,Huzn wa Raja’,"94:5-6, 39:53",Emotional resilience
+Knowledge & Reasoning,Thinking,Tafakkur,"3:191, 16:12",Encouraged reflection
+Knowledge,Learning,Ilm,"20:114, 58:11",Pursuit of truth and knowledge
+Nature & Creation,Heavens and Earth,Samaawaat wal Ard,"2:164, 16:10-18",Signs of Allah in creation
+Nature & Creation,Animals,Hayawaanat,"6:38, 24:45",Purposeful creation
+Nature & Creation,Water Cycle,Ma’,"23:18, 24:43",Source of life
+Dawah & Guidance,Calling to Islam,Dawah,"16:125, 41:33",Wisdom and beautiful preaching
+Dawah & Guidance,Scriptures & Revelation,Wahy,"6:19, 5:48",Books sent to guide mankind
+Day of Judgment,Resurrection,Qiyamah,"22:5-7, 36:51",Second creation and reckoning
+Day of Judgment,Paradise,Jannah,"55:46-78, 76:11-22",Final reward
+Day of Judgment,Hellfire,Jahannam,"4:56, 74:26-30",Warning and consequence
+Signs & Warnings,End Times,Ashraat as-Sa’ah,"18:99, 81:1-14",Events before resurrection
+Du'as & Supplications,Prophetic Duas,Du’a al-Anbiya,"21:87, 14:40",Model supplications
+Du'as & Supplications,Personal Duas,Du’a',"2:201, 3:8",Direct conversation with Allah
+Governance & Justice,Rulership & Authority,Wilayah,"4:59, 42:38",Obedience to leaders and consultation
+Governance & Justice,Corruption,Fasad,"2:11-12, 5:33",Moral and political disorder
+Governance & Justice,Oppression,Dhulm,"14:42, 42:42",Condemned in all forms
+Governance & Justice,People’s Rights,Huquq al-Ibad,"4:135, 83:1-6",Includes fairness in dealings
+Governance & Justice,Accountability,Muhasaba,"18:49, 99:7-8",Individual deeds recorded
+Economics & Finance,Earning & Spending,Kasab wa Infaq,"2:267, 9:34",Ethics in money flow
+Economics & Finance,Usury,Riba,"2:275-279",Strictly prohibited
+Economics & Finance,Trade & Commerce,Tijarah,"2:282, 4:29",Halal business and ethics
+Economics & Finance,Debt & Contracts,Dayn,"2:282-283",Longest verse of the Qur'an deals with this
+Social Issues,Racism & Equality,Tafawut wa Musawah,"49:13",Humanity is one; virtue is the measure
+Social Issues,Wastefulness,Israf,"7:31, 17:26-27",Extravagance condemned
+Social Issues,Backbiting,Gheebah,"49:12",Compared to eating a brother’s flesh
+Social Issues,Slander,Buhtan,"24:11-20",Harshly punished, esp. regarding chaste women
+Social Issues,Gossip & Rumors,Namimah,"24:15, 104:1",Destroys trust
+Social Issues,Lying,Kadhib,"16:105, 22:30",A major sin
+Social Issues,Enjoining good & forbidding evil,Amr bil Ma’ruf wa Nahi ‘anil Munkar,"3:104, 9:71",A core societal duty
+Women & Gender,Modesty & Hijab,Hijab,"24:31, 33:59",Dress and demeanor guidelines
+Women & Gender,Men & Women Equality,Musawah,"4:1, 9:71",Spiritual equality and complementarity
+Women & Gender,Widows and Divorcees,Armalah wa Mutallaqah,"2:234-240",Guidance and support
+Women & Gender,Inheritance for Women,Mirath an-Nisaa,"4:7, 4:32",Right to a defined share
+Youth & Children,Adolescents,Murahiqeen,"24:58-59",Privacy and training guidelines
+Youth & Children,Parental Respect,Birrul Walidain,"31:14, 17:23",Second only to worship
+Youth & Children,Child Rights,Huquq al-Atfal,"6:151, 17:31",Prohibits child-killing and abuse
+Environmental Ethics,Water Conservation,Tahaffuz al-Ma’,"7:31, 25:67",Moderation in use of water
+Environmental Ethics,Animal Rights,Huquq al-Hayawan,"6:38, 24:45",All creatures are communities
+Environmental Ethics,Corruption on Earth,Fasad fil Ard,"30:41, 2:60",Includes environmental degradation
+Prophetic Characteristics,Mercy,Rahmah,"21:107, 9:128",Key trait of the Prophet ﷺ
+Prophetic Characteristics,Patience,Sabr,"46:35, 20:130",Repeated in his life
+Prophetic Characteristics,Forbearance,Hilm,"41:34, 3:159",Kindness in the face of hostility
+Prophetic Characteristics,Trustworthiness,Amanah,"33:21, 26:106-107",Core of his title "Al-Ameen"
+Ethics in Conflict,Treaty & Peace,Solh,"8:61, 5:1",Encouraged if just
+Ethics in Conflict,Prisoners of War,Asraa,"76:8, 47:4",Guidance on humane treatment
+Ethics in Conflict,Self-Defense,Difa’,"22:39, 2:190",Permissible under constraints
+Psychological & Emotional Topics,Fear & Anxiety,Khawf,"3:175, 9:51",Countered by trust in Allah
+Psychological & Emotional Topics,Hope & Optimism,Raja’,"39:53, 94:5-6",Never despair of Allah’s mercy
+Psychological & Emotional Topics,Sadness & Depression,Huzn,"12:84, 94:5",Prophets also experienced grief
+Psychological & Emotional Topics,Arrogance & Pride,Kibr,"28:83, 31:18",Spiritual poison
+Spiritual States,Guidance,Hidayah,"2:2, 24:35",Only Allah gives it
+Spiritual States,Misguidance,Dalalah,"6:116, 4:88",A result of rejecting truth
+Spiritual States,Hardness of Heart,Qaswat al-Qalb,"2:74, 57:16",Causes: sins, heedlessness
+Spiritual States,Submission,Islam,"3:19, 3:85",Root meaning: peace through surrender
+Signs of Hypocrisy,Inward Hypocrisy,Nifaq,"2:8-10, 63:1-8",Warning against double-faced behavior
+Signs of Hypocrisy,Delaying Prayer,Takheer Salah,"107:4-5",Seen as a sign of hypocrisy
+Signs of Hypocrisy,Breaking Trust,Khiyanah,"8:27, 4:107",Contrary to Iman
+Signs of Believers,Fear of Allah,Taqwa,"3:102, 2:2",Root of all righteousness
+Signs of Believers,Repentance,Tawbah,"66:8, 9:104",A regular habit
+Signs of Believers,Humility in Salah,Khushoo’,"23:1-2",Mark of successful believers
+Signs of Believers,Generosity,Infaq,"2:261-273",Secret and open charity
+Science & Nature,Creation of Universe,Khalq al-Samawat wal-Ard,"21:30, 41:11",Big Bang-like reference
+Science & Nature,Embryology,Nutfah/’Alaqah,"23:13-14, 96:2",Stages of human formation
+Science & Nature,Water Cycle,Dawrat al-Ma',"39:21, 30:48",Evaporation, rain, growth
+Science & Nature,Mountains as Pegs,Rawasiya,"78:6-7, 16:15",Stabilization of Earth
+Science & Nature,Barrier Between Seas,Barzakh,"55:19-20",Scientific phenomenon of estuaries
+Science & Nature,Iron and Metals,Hadid,"57:25",Sent down with strength
+Science & Nature,Rotation and Orbits,Falak,"21:33, 36:40",Celestial movements
+Philosophical Themes,Existence and Purpose,Ghayah al-Wujud,"51:56",Purpose: worship
+Philosophical Themes,Free Will vs Destiny,Qadar,"76:3, 57:22",Test vs decree
+Philosophical Themes,Time and Reality,Zaman,"103:1, 18:60-82",Time as a trial
+Philosophical Themes,Death and Afterlife transition,Barzakh,"23:100",Interim state before Qiyamah
+Philosophical Themes,Knowledge and Ignorance,‘Ilm wa Jahl,"20:114, 58:11",Higher status for the learned
+Philosophical Themes,Light and Darkness,Nur wa Zulumat,"24:35, 2:257",Symbolic & real
+Philosophical Themes,Truth vs Falsehood,Haqq wa Batil,"17:81, 21:18",One prevails over the other
+Philosophical Themes,Inner Peace,Sakinah,"48:4, 9:26",Gift of tranquility from Allah
+Philosophical Themes,Trials & Tribulations,Ibtilaa,"2:155-157",Spiritual purification
+Philosophical Themes,Miracles,Mu‘jizat,"2:60, 26:63",With prophets for affirmation
+Philosophical Themes,Dreams & Visions,Ru’ya,"12:4-6, 37:102",As divine signs
+Esoteric/Mystical,Unseen World,Ghayb,"2:3, 6:59",Belief in things beyond perception
+Esoteric/Mystical,Angels,Mala’ika,"35:1, 66:6",Do not disobey Allah
+Esoteric/Mystical,Jinn & Spirits,Jinn,"72:1-15",Created from smokeless fire
+Esoteric/Mystical,Destiny,Lauh al-Mahfuz,"85:22",Preserved Tablet
+Esoteric/Mystical,Heavenly Books,Suhuf,"87:18-19, 53:36",Scrolls of previous prophets
+Esoteric/Mystical,Throne and Kursi,Arsh wa Kursi,"2:255, 40:15",Realities beyond comprehension
+Esoteric/Mystical,Heavenly Journeys,Isra wal Mi’raj,"17:1",Night Journey of the Prophet ﷺ
+Esoteric/Mystical,Signs of the End Times,Ashraat as-Sa’ah,"81, 82, 101",Sudden cosmic changes
+Esoteric/Mystical,The Trumpet,Sur,"39:68, 69:13",Blown by Israfil
+Esoteric/Mystical,Heavenly Records,Kitab al-A‘mal,"17:13-14, 18:49",Every deed written
+Esoteric/Mystical,Scales of Justice,Meezan,"21:47, 101:6-9",Weight of deeds
+Esoteric/Mystical,Sirat (Bridge over Hell),Sirat,"19:71-72",Passed by all souls
+Psychological Themes,Self-Reflection,Muhaasabah,"59:18-19",Check your own soul
+Psychological Themes,Conscience,Nafs al-Lawwama,"75:2",Self-reproaching soul
+Psychological Themes,Contentment,Rida,"9:21, 13:28",Calm heart with Dhikr
+Psychological Themes,Envy & Jealousy,Hasad,"113:5, 12:8-9",Root of evil actions
+Psychological Themes,Anger,Ghadab,"7:150, 3:134",Control of anger is praiseworthy
+Psychological Themes,Greed,Shuhh,"59:9, 4:128",Destroys unity and justice
+Moral Themes,Trustworthiness,Amanah,"8:27, 33:72",Heaviest burden
+Moral Themes,Truthfulness,Sidq,"9:119, 33:70",Key to righteousness
+Moral Themes,Kindness & Compassion,Rahmah wa Ihsan,"16:90, 90:17",True mark of believers
+Moral Themes,Justice & Fairness,Adl,"4:135, 5:8",Absolute standard
+Historical Themes,Previous Nations,Ummam al-Sabiqah,"7:59-93",Lessons from their rise and fall
+Historical Themes,Pharaohs and Tyrants,Fira’un,"28:3-6, 79:15-25",Symbol of arrogance
+Historical Themes,Prophets’ Stories,Qasas al-Anbiya,"12, 19, 26",Told with moral lessons
+Historical Themes,Migration (Hijrah),Hijrah,"9:20, 59:8-9",Faith over comfort
+Rare Themes,Orphans,Yatama,"2:220, 93:6",Highly honored
+Rare Themes,Divorce,Talaq,"2:229-231, 65:1-2",Guided and structured
+Rare Themes,Adoption,Kafalah,"33:4-5",With care to lineage
+Rare Themes,Reconciliation,Islah,"4:128, 49:10",Better than separation
+Rare Themes,Food Ethics,Halal wal Tayyib,"2:168, 6:145",Pure and permissible
+Rare Themes,Slavery & Emancipation,Itq,"90:13, 24:33",Promoted gradual abolition
+
