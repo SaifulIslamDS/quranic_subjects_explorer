@@ -36,7 +36,7 @@ def reset_filters():
 st.markdown(
     """
     <div style="display: flex; justify-content: space-between; align-items: center;">
-        <h1 style="margin: 0;">📖 Qur’anic Subjects Explorer</h1>
+        <h1 style="margin: 0; font-size:2rem">📖 Qur’anic Subjects Explorer</h1>
     </div>
     """,
     unsafe_allow_html=True
@@ -87,17 +87,18 @@ if selected_topics_vals:
 # ---------------------------------
 # 🧾 Render in Article-Style View
 # ---------------------------------
-st.markdown(f"### Showing {len(filtered_df)} Ayah(s)\n")
+st.markdown(f"###### Showing {len(filtered_df)} Ayah(s)\n")
 
 for i, row in filtered_df.iterrows():
     st.markdown(f"""
-<div style="border: 1px solid #ccc; border-radius: 12px; padding: 16px; margin-bottom: 20px; box-shadow: 1px 1px 5px rgba(0,0,0,0.05);">
-    <h4 style="color:#1a73e8; margin-bottom: 8px;">📌 Topic: {row['Topic']}</h4>
-    <span style="color: #555;"><strong>📖 Ayah:</strong> {row['SurahName:AyatNumber']}</span>
-    <p style="font-size: 20px; color: #000; text-align: right; direction: rtl;"><strong>{row['Ayat in Arabic']}</strong></p>
-    <p><em>Bangla:</em> {row['Bangla Translation']}</p>
-</div>
+        <div style="border: 1px solid #ccc; border-radius: 12px; padding: 16px; margin-bottom: 20px; box-shadow: 1px 1px 5px rgba(0,0,0,0.05);">
+            <h4 style="color:#008000; margin-bottom: 8px;">📌 {row['Topic']}</h4>
+            <span style="color: #555;"><strong>📘 Surah Name & Number:</strong> {row['SurahName:AyatNumber']}</span>
+            <p style="font-size: 20px; color: #000; text-align: right; direction: rtl;"><strong>{row['Ayat in Arabic']}</strong></p>
+            <p><em>Bangla:</em> {row['Bangla Translation']}</p>
+        </div>
 """, unsafe_allow_html=True)
+
 
 
 # ---------------------------------
