@@ -1,12 +1,19 @@
-import streamlit as st
 import pandas as pd
+import streamlit as st
+# ---------------------------------
+# Set page config
+st.set_page_config(
+    page_title="Qur’anic Subjects Explorer",
+    page_icon="📖",
+    layout="wide"
+)
 
 # ---------------------------------
 # 📦 Load Data
 # ---------------------------------
 @st.cache_data
 def load_data():
-    return pd.read_csv("https://docs.google.com/spreadsheets/d/e/2PACX-1vSteXbAdUyJFek-Uysk9Jlb4iwF6G51Yt3ThxOHQVmacBjZicJ7NDPKoMCR0uJoGJdPoe8jHvLYqwyC/pub?gid=843924243&single=true&output=csv")  # ✅ Your dataset
+    return pd.read_csv("https://docs.google.com/spreadsheets/d/e/2PACX-1vSteXbAdUyJFek-Uysk9Jlb4iwF6G51Yt3ThxOHQVmacBjZicJ7NDPKoMCR0uJoGJdPoe8jHvLYqwyC/pub?gid=843924243&single=true&output=csv")
 
 df = load_data()
 
@@ -84,14 +91,14 @@ st.markdown(f"### Showing {len(filtered_df)} Ayah(s)\n")
 
 for i, row in filtered_df.iterrows():
     st.markdown(f"""
-    <div style="border: 1px solid #ccc; border-radius: 12px; padding: 16px; margin-bottom: 20px; box-shadow: 1px 1px 5px rgba(0,0,0,0.05);">
-        <h4 style="color:#1a73e8; margin-bottom: 8px;">📌 Topic: {row['Topic']}</h4>
-        <span style="color: #555;><strong>📖 Ayah:</strong> {row['Surah:Ayat']}</span>
-        <span style="color: #555;><strong>📖 Ayah:</strong> {row['SurahName:AyatNumber']}</span>
-        <p style="font-size: 20px; color: #000; text-align: right; direction: rtl;"><strong>{row['Ayat in Arabic']}</strong></p>
-        <p><em>🇧🇩 Bangla:</em> {row['Bangla Translation']}</p>
-    </div>
-    """, unsafe_allow_html=True)
+<div style="border: 1px solid #ccc; border-radius: 12px; padding: 16px; margin-bottom: 20px; box-shadow: 1px 1px 5px rgba(0,0,0,0.05);">
+    <h4 style="color:#1a73e8; margin-bottom: 8px;">📌 Topic: {row['Topic']}</h4>
+    <span style="color: #555;"><strong>📖 Ayah:</strong> {row['SurahName:AyatNumber']}</span>
+    <p style="font-size: 20px; color: #000; text-align: right; direction: rtl;"><strong>{row['Ayat in Arabic']}</strong></p>
+    <p><em>Bangla:</em> {row['Bangla Translation']}</p>
+</div>
+""", unsafe_allow_html=True)
+
 
 # ---------------------------------
 # 🦶 Footer
