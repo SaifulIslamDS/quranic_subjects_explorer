@@ -6,7 +6,7 @@ import pandas as pd
 # ---------------------------------
 @st.cache_data
 def load_data():
-    return pd.read_csv("quran_subjects.csv")  # ✅ Your dataset
+    return pd.read_csv("https://docs.google.com/spreadsheets/d/e/2PACX-1vSteXbAdUyJFek-Uysk9Jlb4iwF6G51Yt3ThxOHQVmacBjZicJ7NDPKoMCR0uJoGJdPoe8jHvLYqwyC/pub?gid=843924243&single=true&output=csv")  # ✅ Your dataset
 
 df = load_data()
 
@@ -26,13 +26,14 @@ def reset_filters():
 # ---------------------------------
 # 🧱 Layout: Header + Hamburger
 # ---------------------------------
-col1, col2 = st.columns([10, 1])
-with col1:
-    st.title("📖 Qur’anic Subjects Explorer")
-with col2:
-    if st.button("☰", key="hamburger"):
-        st.session_state.show_sidebar = not st.session_state.show_sidebar
-
+st.markdown(
+    """
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+        <h1 style="margin: 0;">📖 Qur’anic Subjects Explorer</h1>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
 # ---------------------------------
 # 🎛️ Sidebar Filters
 # ---------------------------------
@@ -99,7 +100,7 @@ st.markdown(
     """
     <hr style="margin-top: 60px;">
     <div style="text-align: center; font-size: 14px;">
-        Developed with ❤️ by <a href="https://saifulshuvo.com" target="_blank" style="text-decoration: none;">Saiful Islam Shuvo</a>
+        Developed with ❤️ by <a href="https://saifulshuvo.com" target="_blank" style="text-decoration: none;">Saiful Islam</a>
     </div>
     """,
     unsafe_allow_html=True
