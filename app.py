@@ -12,44 +12,33 @@ st.set_page_config(
 # ---------------------------------
 st.markdown("""
 <style>
-  /* Hide Streamlit's default sidebar toggle */
+  /* Hide default sidebar toggle */
   [data-testid="collapsedControl"] {
     display: none;
   }
 
-  /* Custom hamburger button */
+  /* Custom Hamburger Button */
   .custom-hamburger {
     position: fixed;
-    top: 10px;
-    right: 15px;
+    top: 12px;
+    right: 16px;
     z-index: 9999;
     background-color: #1a73e8;
     color: white;
     border: none;
-    font-size: 26px;
-    font-weight: bold;
+    font-size: 28px;
     border-radius: 8px;
-    padding: 6px 12px;
+    padding: 10px 14px;
     cursor: pointer;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
   }
 
-  /* Mobile responsiveness */
-  @media (max-width: 768px) {
-    .custom-hamburger {
-      top: 12px;
-      right: 12px;
-      font-size: 28px;
-      padding: 10px 14px;
-    }
-  }
-
-  /* Scroll to Top button */
+  /* Scroll to top button */
   .scroll-to-top {
     position: fixed;
     bottom: 30px;
     right: 20px;
-    z-index: 1000;
+    z-index: 9999;
     background-color: #1a73e8;
     color: white;
     padding: 10px 14px;
@@ -58,37 +47,47 @@ st.markdown("""
     cursor: pointer;
     box-shadow: 0 2px 6px rgba(0,0,0,0.15);
   }
+
+  /* Responsive tweak */
+  @media (max-width: 768px) {
+    .custom-hamburger {
+      font-size: 32px;
+      padding: 12px 16px;
+    }
+  }
 </style>
 
-<!-- Hamburger Button -->
+<!-- Custom Hamburger -->
 <button class="custom-hamburger" onclick="toggleSidebar()">☰</button>
 
-<!-- Scroll to Top -->
-<div class="scroll-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">↑</div>
+<!-- Scroll-to-top button -->
+<div class="scroll-to-top" onclick="scrollToTop()">↑</div>
 
 <script>
+  // Scroll to top function
+  function scrollToTop() {
+    window.scrollTo({top: 0, behavior: 'smooth'});
+  }
+
+  // Toggle sidebar by simulating internal Streamlit action
   function toggleSidebar() {
-    const root = window.parent.document;
+    const streamlitDoc = window.parent.document;
 
-    // Try desktop sidebar toggle
-    const collapsedControl = root.querySelector('[data-testid="collapsedControl"]');
-    if (collapsedControl) {
-      collapsedControl.click();
-      return;
-    }
-
-    // Try mobile sidebar toggle (Streamlit's internal mobile class may vary)
-    const hamburgerOverlay = root.querySelector('button[class*="css"][aria-label="Menu"]');
-    if (hamburgerOverlay) {
-      hamburgerOverlay.click();
-      return;
-    }
-
-    // Fallback: Show/hide the sidebar manually
-    const sidebar = root.querySelector('[data-testid="stSidebar"]');
-    if (sidebar) {
-      const isHidden = window.getComputedStyle(sidebar).display === 'none';
-      sidebar.style.display = isHidden ? 'block' : 'none';
+    const sidebarToggle = streamlitDoc.querySelector('[data-testid="collapsedControl"]');
+    if (sidebarToggle) {
+      sidebarToggle.click();  // Desktop
+    } else {
+      // Try common mobile fallback
+      const mobileMenu = streamlitDoc.querySelector("button[aria-label='Main menu']");
+      if (mobileMenu) {
+        mobileMenu.click();  // Mobile
+      } else {
+        // Emergency fallback: Try toggle sidebar via inline styles
+        const sidebar = streamlitDoc.querySelector('[data-testid="stSidebar"]');
+        if (sidebar) {
+          sidebar.style.display = (sidebar.style.display === "none") ? "block" : "none";
+        }
+      }
     }
   }
 </script>
@@ -125,17 +124,6 @@ with col1:
 with col2:
     if st.button("☰", key="hamburger"):
         st.session_state.show_sidebar = not st.session_state.show_sidebar
-
-# ✅ Inject custom CSS to hide default sidebar arrow
-st.markdown("""
-    <style>
-        /* Hide Streamlit's default sidebar collapse button */
-        [data-testid="collapsedControl"] {
-            display: none;
-        }
-    </style>
-""", unsafe_allow_html=True)
-
 
 # ---------------------------------
 # 🎛️ Sidebar Filters
