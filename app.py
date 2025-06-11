@@ -12,8 +12,18 @@ st.set_page_config(
 # ---------------------------------
 st.markdown("""
 <style>
+  /* Completely hide Streamlit's top header, including spacing */
+  header[data-testid="stHeader"] {
+    display: none;
+  }
+
   /* Hide default sidebar toggle */
   [data-testid="collapsedControl"] {
+    display: none;
+  }
+
+  /* Hide Streamlit's default hamburger icon (extra safety) */
+  .st-emotion-cache-1eyfjps {
     display: none;
   }
 
@@ -33,21 +43,6 @@ st.markdown("""
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
   }
 
-  /* Scroll to top button */
-  .scroll-to-top {
-    position: fixed;
-    bottom: 30px;
-    right: 20px;
-    z-index: 9999;
-    background-color: #1a73e8;
-    color: white;
-    padding: 10px 14px;
-    border-radius: 50%;
-    font-size: 18px;
-    cursor: pointer;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-  }
-
   /* Responsive tweak */
   @media (max-width: 768px) {
     .custom-hamburger {
@@ -56,41 +51,6 @@ st.markdown("""
     }
   }
 </style>
-
-<!-- Custom Hamburger -->
-<button class="custom-hamburger" onclick="toggleSidebar()">☰</button>
-
-<!-- Scroll-to-top button -->
-<div class="scroll-to-top" onclick="scrollToTop()">↑</div>
-
-<script>
-  // Scroll to top function
-  function scrollToTop() {
-    window.scrollTo({top: 0, behavior: 'smooth'});
-  }
-
-  // Toggle sidebar by simulating internal Streamlit action
-  function toggleSidebar() {
-    const streamlitDoc = window.parent.document;
-
-    const sidebarToggle = streamlitDoc.querySelector('[data-testid="collapsedControl"]');
-    if (sidebarToggle) {
-      sidebarToggle.click();  // Desktop
-    } else {
-      // Try common mobile fallback
-      const mobileMenu = streamlitDoc.querySelector("button[aria-label='Main menu']");
-      if (mobileMenu) {
-        mobileMenu.click();  // Mobile
-      } else {
-        // Emergency fallback: Try toggle sidebar via inline styles
-        const sidebar = streamlitDoc.querySelector('[data-testid="stSidebar"]');
-        if (sidebar) {
-          sidebar.style.display = (sidebar.style.display === "none") ? "block" : "none";
-        }
-      }
-    }
-  }
-</script>
 """, unsafe_allow_html=True)
 
 # ---------------------------------
