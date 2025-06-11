@@ -7,71 +7,64 @@ st.set_page_config(
     page_icon="📖",
     layout="wide"
 )
+
 # ---------------------------------
 # Hamburger Menu
 # ---------------------------------
-
 st.markdown("""
 <style>
-    [data-testid="collapsedControl"] {
-        display: none;
-    }
-
-    .custom-hamburger {
-        position: fixed;
-        top: 10px;
-        right: 15px;
-        z-index: 9999;
-        background-color: #1a73e8;
-        color: white;
-        border: none;
-        font-size: 26px;
-        font-weight: bold;
-        border-radius: 8px;
-        padding: 6px 12px;
-        cursor: pointer;
-        box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-    }
-
-    .scroll-to-top {
-        position: fixed;
-        bottom: 30px;
-        right: 20px;
-        z-index: 1000;
-        background-color: #1a73e8;
-        color: white;
-        padding: 10px 14px;
-        border-radius: 50%;
-        font-size: 18px;
-        cursor: pointer;
-        box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-    }
+  [data-testid="collapsedControl"] { display: none; }
+  .custom-hamburger {
+    position: fixed;
+    top: 10px;
+    right: 15px;
+    z-index: 9999;
+    background-color: #1a73e8;
+    color: white;
+    border: none;
+    font-size: 26px;
+    font-weight: bold;
+    border-radius: 8px;
+    padding: 6px 12px;
+    cursor: pointer;
+  }
+  .scroll-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 20px;
+    z-index: 1000;
+    background-color: #1a73e8;
+    color: white;
+    padding: 10px 14px;
+    border-radius: 50%;
+    font-size: 18px;
+    cursor: pointer;
+  }
 </style>
 
-<!-- Hamburger Button -->
-<button class="custom-hamburger" onclick="simulateSidebarToggle()">☰</button>
-
-<!-- Scroll to Top -->
+<button class="custom-hamburger" onclick="toggleSidebar()">☰</button>
 <div class="scroll-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">↑</div>
 
 <script>
-function simulateSidebarToggle() {
-    const iframe = window.parent.document;
-    const sidebarToggle = iframe.querySelector('[data-testid="collapsedControl"]');
-
-    if (sidebarToggle) {
-        sidebarToggle.click();
+  function toggleSidebar() {
+    const root = window.parent.document;
+    // Collect all toggle controls (desktop + mobile)
+    const toggles = root.querySelectorAll('[data-testid="collapsedControl"], .css-1bt8lqe'); // .css-1bt8lqe may be mobile overlay
+    if (toggles.length) {
+      // Click each found toggle to fully expand/collapse sidebar
+      toggles.forEach(btn => btn.click());
     } else {
-        // Fallback for desktop: force sidebar show/hide
-        const sidebar = iframe.querySelector('[data-testid="stSidebar"]');
-        if (sidebar) {
-            const isHidden = window.getComputedStyle(sidebar).display === "none";
-            sidebar.style.display = isHidden ? "block" : "none";
-        }
+      // Fallback: show/hide sidebar manually
+      const sidebar = root.querySelector('[data-testid="stSidebar"]');
+      if (sidebar) {
+        const isHidden = window.getComputedStyle(sidebar).display === 'none';
+        sidebar.style.display = isHidden ? 'block' : 'none';
+      }
     }
-}
+  }
 </script>
 """, unsafe_allow_html=True)
+
 
 # ---------------------------------
 # 📦 Load Data
