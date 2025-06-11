@@ -7,13 +7,17 @@ st.set_page_config(
     page_icon="📖",
     layout="wide"
 )
-
 # ---------------------------------
-# Hamburger Menu
+# ✅ Custom CSS + Hamburger Button + Scroll-to-Top + JS
 # ---------------------------------
 st.markdown("""
 <style>
-  [data-testid="collapsedControl"] { display: none; }
+  /* Hide Streamlit's default sidebar toggle */
+  [data-testid="collapsedControl"] {
+    display: none;
+  }
+
+  /* Custom hamburger button */
   .custom-hamburger {
     position: fixed;
     top: 10px;
@@ -27,7 +31,20 @@ st.markdown("""
     border-radius: 8px;
     padding: 6px 12px;
     cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
   }
+
+  /* Mobile responsiveness */
+  @media (max-width: 768px) {
+    .custom-hamburger {
+      top: 12px;
+      right: 12px;
+      font-size: 28px;
+      padding: 10px 14px;
+    }
+  }
+
+  /* Scroll to Top button */
   .scroll-to-top {
     position: fixed;
     bottom: 30px;
@@ -39,32 +56,43 @@ st.markdown("""
     border-radius: 50%;
     font-size: 18px;
     cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
   }
 </style>
 
+<!-- Hamburger Button -->
 <button class="custom-hamburger" onclick="toggleSidebar()">☰</button>
+
+<!-- Scroll to Top -->
 <div class="scroll-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">↑</div>
 
 <script>
   function toggleSidebar() {
     const root = window.parent.document;
-    // Collect all toggle controls (desktop + mobile)
-    const toggles = root.querySelectorAll('[data-testid="collapsedControl"], .css-1bt8lqe'); // .css-1bt8lqe may be mobile overlay
-    if (toggles.length) {
-      // Click each found toggle to fully expand/collapse sidebar
-      toggles.forEach(btn => btn.click());
-    } else {
-      // Fallback: show/hide sidebar manually
-      const sidebar = root.querySelector('[data-testid="stSidebar"]');
-      if (sidebar) {
-        const isHidden = window.getComputedStyle(sidebar).display === 'none';
-        sidebar.style.display = isHidden ? 'block' : 'none';
-      }
+
+    // Try desktop sidebar toggle
+    const collapsedControl = root.querySelector('[data-testid="collapsedControl"]');
+    if (collapsedControl) {
+      collapsedControl.click();
+      return;
+    }
+
+    // Try mobile sidebar toggle (Streamlit's internal mobile class may vary)
+    const hamburgerOverlay = root.querySelector('button[class*="css"][aria-label="Menu"]');
+    if (hamburgerOverlay) {
+      hamburgerOverlay.click();
+      return;
+    }
+
+    // Fallback: Show/hide the sidebar manually
+    const sidebar = root.querySelector('[data-testid="stSidebar"]');
+    if (sidebar) {
+      const isHidden = window.getComputedStyle(sidebar).display === 'none';
+      sidebar.style.display = isHidden ? 'block' : 'none';
     }
   }
 </script>
 """, unsafe_allow_html=True)
-
 
 # ---------------------------------
 # 📦 Load Data
