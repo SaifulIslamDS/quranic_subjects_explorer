@@ -7,6 +7,75 @@ st.set_page_config(
     page_icon="📖",
     layout="wide"
 )
+# ---------------------------------
+# Hamburger Menu
+# ---------------------------------
+
+st.markdown("""
+    <style>
+        [data-testid="collapsedControl"] {
+            display: none;
+        }
+
+        .custom-hamburger {
+            position: fixed;
+            top: 10px;
+            right: 15px;
+            z-index: 9999;
+            background-color: #1a73e8;
+            color: white;
+            border: none;
+            font-size: 26px;
+            font-weight: bold;
+            border-radius: 8px;
+            padding: 6px 12px;
+            cursor: pointer;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+        }
+
+        .scroll-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 20px;
+            z-index: 1000;
+            background-color: #1a73e8;
+            color: white;
+            padding: 10px 14px;
+            border-radius: 50%;
+            font-size: 18px;
+            cursor: pointer;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+        }
+    </style>
+
+    <button class="custom-hamburger" onclick="toggleSidebar()">☰</button>
+    <div class="scroll-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">↑</div>
+
+    <script>
+        function toggleSidebar() {
+            const iframe = window.parent.document;
+            const sidebar = iframe.querySelector('[data-testid="stSidebar"]');
+
+            if (sidebar) {
+                const currentDisplay = window.getComputedStyle(sidebar).display;
+
+                // Toggle display
+                if (currentDisplay === "none") {
+                    sidebar.style.display = "block";
+                } else {
+                    sidebar.style.display = "none";
+                }
+
+                // Fix layout shift issue on mobile
+                const mainBlock = iframe.querySelector('[data-testid="stAppViewContainer"]');
+                if (mainBlock) {
+                    mainBlock.style.marginLeft = sidebar.style.display === "none" ? "0" : "";
+                }
+            }
+        }
+    </script>
+""", unsafe_allow_html=True)
+
 
 # ---------------------------------
 # 📦 Load Data
@@ -49,60 +118,6 @@ st.markdown("""
         }
     </style>
 """, unsafe_allow_html=True)
-
-# 🔧 Inject CSS & JS
-st.markdown("""
-    <style>
-        [data-testid="collapsedControl"] { display: none; }
-
-        .custom-hamburger {
-            position: fixed;
-            top: 10px;
-            right: 15px;
-            z-index: 10000;
-            background-color: #1a73e8;
-            color: white;
-            border: none;
-            font-size: 26px;
-            font-weight: bold;
-            border-radius: 8px;
-            padding: 4px 12px;
-            cursor: pointer;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-        }
-
-        .scroll-to-top {
-            position: fixed;
-            bottom: 30px;
-            right: 20px;
-            z-index: 1000;
-            background-color: #1a73e8;
-            color: white;
-            padding: 10px 14px;
-            border-radius: 50%;
-            font-size: 18px;
-            cursor: pointer;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-        }
-    </style>
-
-    <button class="custom-hamburger" onclick="toggleSidebar()">☰</button>
-    <div class="scroll-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">↑</div>
-
-    <script>
-        function toggleSidebar() {
-            const sidebar = parent.document.querySelector('section[data-testid="stSidebar"]');
-            if (sidebar) {
-                if (sidebar.style.display === 'none') {
-                    sidebar.style.display = 'block';
-                } else {
-                    sidebar.style.display = 'none';
-                }
-            }
-        }
-    </script>
-""", unsafe_allow_html=True)
-
 
 
 # ---------------------------------
