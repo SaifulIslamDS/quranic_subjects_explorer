@@ -33,14 +33,78 @@ def reset_filters():
 # ---------------------------------
 # 🧱 Layout: Header + Hamburger
 # ---------------------------------
-st.markdown(
-    """
-    <div style="display: flex; justify-content: space-between; align-items: center;">
-        <h1 style="margin: 0; font-size:2rem">📖 Qur’anic Subjects Explorer</h1>
-    </div>
-    """,
-    unsafe_allow_html=True
-)
+col1, col2 = st.columns([10, 1])
+with col1:
+    st.title("📖 Qur’anic Subjects Explorer")
+with col2:
+    if st.button("☰", key="hamburger"):
+        st.session_state.show_sidebar = not st.session_state.show_sidebar
+
+# ✅ Inject custom CSS to hide default sidebar arrow
+st.markdown("""
+    <style>
+        /* Hide Streamlit's default sidebar collapse button */
+        [data-testid="collapsedControl"] {
+            display: none;
+        }
+    </style>
+""", unsafe_allow_html=True)
+
+# 🔧 Inject CSS & JS
+st.markdown("""
+    <style>
+        [data-testid="collapsedControl"] { display: none; }
+
+        .custom-hamburger {
+            position: fixed;
+            top: 10px;
+            right: 15px;
+            z-index: 10000;
+            background-color: #1a73e8;
+            color: white;
+            border: none;
+            font-size: 26px;
+            font-weight: bold;
+            border-radius: 8px;
+            padding: 4px 12px;
+            cursor: pointer;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+        }
+
+        .scroll-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 20px;
+            z-index: 1000;
+            background-color: #1a73e8;
+            color: white;
+            padding: 10px 14px;
+            border-radius: 50%;
+            font-size: 18px;
+            cursor: pointer;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+        }
+    </style>
+
+    <button class="custom-hamburger" onclick="toggleSidebar()">☰</button>
+    <div class="scroll-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">↑</div>
+
+    <script>
+        function toggleSidebar() {
+            const sidebar = parent.document.querySelector('section[data-testid="stSidebar"]');
+            if (sidebar) {
+                if (sidebar.style.display === 'none') {
+                    sidebar.style.display = 'block';
+                } else {
+                    sidebar.style.display = 'none';
+                }
+            }
+        }
+    </script>
+""", unsafe_allow_html=True)
+
+
+
 # ---------------------------------
 # 🎛️ Sidebar Filters
 # ---------------------------------
